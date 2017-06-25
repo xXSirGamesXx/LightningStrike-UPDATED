@@ -1,0 +1,16 @@
+---
+name: LightningStrike
+author: MichaelM04
+main: LightningStrike\LightningStrike
+version: 2.1.0
+api:
+- 3.0.0-ALPHA5
+- 3.0.0-ALPHA6
+description: Lightning Strike Very Simple Just Strikes Lightning On Ground When A
+  Player Dies,Joins,
+
+permissions:
+  lightningstrike.use:
+    description: "PurePerms by 64FF00! (Twitter: @64FF00)"
+    default: true
+...
