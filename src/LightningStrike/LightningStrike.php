@@ -24,7 +24,7 @@ class LightningStrike extends PluginBase implements Listener{
       $this->saveDefaultConfig();
       $this->lightning = $this->getConfig()->getAll();
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
-      $this->getLogger()->info(TextFormat::GREEN."Lightning Strike RUNNING Made By MichaelM04");
+      $this->getLogger()->info(TextFormat::GREEN."Lightning Strike fixed by xXSirGamesXx enabled");
     }
     /**
      * @param Player $p
@@ -51,7 +51,6 @@ class LightningStrike extends PluginBase implements Listener{
      }
 */
     public function onRespawn(PlayerRespawnEvent $e){
-	if($player->hasPermission("lightningstrike.use")){
 	$p = $e->getPlayer();
         $level = $p->getLevel();
 	$light = new AddEntityPacket();
@@ -69,10 +68,8 @@ class LightningStrike extends PluginBase implements Listener{
         foreach($level->getPlayers() as $pl){
             $pl->dataPacket($light);
         } 
-     }
-	}
+     } 
     public function onQuit(PlayerQuitEvent $e){
-	if($player->hasPermission("lightningstrike.use")){
 	$p = $e->getPlayer();
         $level = $p->getLevel();
 	$light = new AddEntityPacket();
@@ -90,10 +87,8 @@ class LightningStrike extends PluginBase implements Listener{
         foreach($level->getPlayers() as $pl){
             $pl->dataPacket($light);
         } 
-     }
-	}	
+     }	
     public function onJoin(PlayerJoinEvent $e){
-	if($player->hasPermission("lightningstrike.use")){
 	$p = $e->getPlayer();
         $level = $p->getLevel();
 	$light = new AddEntityPacket();
@@ -112,10 +107,7 @@ class LightningStrike extends PluginBase implements Listener{
             $pl->dataPacket($light);
         } 
      }
-	}
-
     public function onDeath(PlayerDeathEvent $e){
-		if($player->hasPermission("lightningstrike.use")){
 	$p = $e->getPlayer();
         $level = $p->getLevel();
 	$light = new AddEntityPacket();
@@ -134,6 +126,6 @@ class LightningStrike extends PluginBase implements Listener{
             $pl->dataPacket($light);
         } 
      }
-	}
   }
+
  
